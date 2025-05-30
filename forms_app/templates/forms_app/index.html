@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularze i Szablony</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{% static 'forms_app/styles.css' %}">
+</head>
+<body>
+<div id="container">
+    <div id="sidebar">
+        <h3>Formularze</h3>
+        <ul>
+            {% for form_name, attrs in formularze.items %}
+                <li><a href="#" class="form-link" data-type="formularze" data-name="{{ form_name }}">{{ form_name }}</a></li>
+            {% endfor %}
+        </ul>
+        <h3>Szablony</h3>
+        <ul>
+            {% for template in szablony %}
+                <li><a href="#" class="template-link" data-type="szablony" data-name="{{ template.template_name }}">{{ template.template_name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="content">
+        <h3>Wybierz element</h3>
+        <button id="download-json">Pobierz forms.json</button>
+        <div id="available-fields">
+            <h4>Dostępne pola:</h4>
+            <div id="fields-list"></div>
+        </div>
+        <div id="editor"></div>
+    </div>
+</div>
+{% csrf_token %}
+<script src="{% static 'forms_app/scripts.js' %}"></script>
+</body>
+</html>

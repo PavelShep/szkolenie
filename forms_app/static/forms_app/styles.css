@@ -1,0 +1,251 @@
+/* styles.css */
+
+/* Styl dla body */
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #f0f2f5; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Styl dla kontenera głównego */
+#container { 
+    display: flex; 
+    width: 80%; 
+    margin: 50px auto; 
+    background: white; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 12px; 
+    overflow: hidden; 
+}
+
+/* Styl dla paska bocznego */
+#sidebar { 
+    width: 250px; 
+    background: linear-gradient(135deg, #2c3e50, #3498db); 
+    color: white; 
+    padding: 25px; 
+}
+
+#sidebar h3 {
+    margin: 0 0 15px;
+    font-size: 1.2em;
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 8px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li {
+    margin: 8px 0;
+}
+
+#sidebar a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+/* Styl dla zawartości głównej */
+#content { 
+    flex: 1; 
+    padding: 25px; 
+}
+
+/* Styl dla elementu listy */
+.item { 
+    background: #ffffff; 
+    padding: 12px 15px; 
+    border-radius: 8px; 
+    margin-bottom: 8px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styl dla przycisków */
+button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+.move-up {
+    color: #2ecc71;
+}
+
+.move-down {
+    color: #3498db;
+}
+
+.delete {
+    color: #e74c3c;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.move-up:hover {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+}
+
+.move-down:hover {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.delete:hover {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#save-template {
+    background: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+}
+
+#download-json {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#download-json:hover {
+    background: #2980b9;
+}
+
+/* Styl dla pola tekstowego */
+textarea { 
+    width: 100%; 
+    height: 120px; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Styl dla dostępnych pól */
+#available-fields {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#available-fields h4 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.field-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-width: 80px;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.field-btn:hover {
+    background: #2980b9;
+}
+
+/* Styl dla formularza dodawania pola */
+#add-field-form {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#add-field-form input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#add-field-form button {
+    background: #27ae60;
+    color: white;
+    width: auto;
+    height: auto;
+    padding: 5px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+}

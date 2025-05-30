@@ -1,0 +1,24 @@
+{
+    "formularze": {
+        "form1": {
+            "nazwisko": "Kowalski",
+            "imie": "Jan",
+            "email": "jan.kowalski@example.com"
+        },
+        "form2": {
+            "email": "maria.nowak@example.com",
+            "telefon": "987654321",
+            "miasto": "Gdańsk"
+        },
+        "form3": {
+            "imie": "Tomasz",
+            "wiek": "35",
+            "adres": "ul. Zielona 8, Poznań"
+        }
+    },
+    "szablony": {
+        "template1": "Cześć {imie} {nazwisko}, twój email to {email}!!!",
+        "template2": "Witaj! Twój numer telefonu to {telefon}, a miasto: {miasto}.",
+        "template3": "Szanowny Panie/Pani {imie}, zapraszamy na spotkanie pod adresem: {adres}."
+    }
+}
